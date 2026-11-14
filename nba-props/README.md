@@ -12,3 +12,11 @@ Run: `python fetch_espn.py data && python build.py data && python model.py data 
 (prop lines are hard-coded in `edges.py` from public previews; update them from your book.)
 
 Caveat: on a 7-day holdout the model roughly ties a season-average baseline (see `results/model_eval.json`).
+
+## v2 — advanced-stats model with lineups (`build_adv.py`, `model_adv.py`, `tonight_adv.py`)
+Projection = projected minutes × season-long per-play rates (USG%, points per play / TS%, REB%, AST%, 3PA rate, 3P%)
+× game pace × opponent factors × Vegas total, plus redistribution of absent players' usage and rebounds.
+- Rates are season-long (no recency weighting), shrunk toward position averages with a 240-minute prior.
+- Minutes come from the player's average in tonight's role (starter or bench), with a blowout trim for starters when the spread is above 4.
+- Lineups: SAC confirmed (NBC Sports); POR = last game's starters; OKC/LAC projected. Players absent from the team's last 4 games are treated as out.
+- Backtest (last 7 days, actual starters): roughly ties season averages (see `results/adv_eval.json`).
