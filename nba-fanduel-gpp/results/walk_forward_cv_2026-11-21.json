@@ -1,0 +1,78 @@
+{
+  "n_eval_dates": 25,
+  "n_eval_rows": 3958,
+  "team_factors": "espn_derived_from_prior_games",
+  "baseline_mae": 7.61,
+  "baseline_rmse": 9.829,
+  "baseline_bias": -0.489,
+  "baseline_spearman": 0.725,
+  "baseline_top10pct_capture": 0.484,
+  "structural_mae": 7.517,
+  "structural_rmse": 9.614,
+  "structural_bias": 0.767,
+  "structural_spearman": 0.743,
+  "structural_top10pct_capture": 0.465,
+  "ridge_mae": 7.517,
+  "ridge_rmse": 9.614,
+  "ridge_bias": 0.767,
+  "ridge_spearman": 0.745,
+  "ridge_top10pct_capture": 0.457,
+  "all_dates": {
+    "season_avg_baseline": {
+      "mae": 7.61,
+      "rmse": 9.829,
+      "bias": -0.489,
+      "spearman_r": 0.725,
+      "top10pct_capture": 0.484,
+      "n": 3958
+    },
+    "structural": {
+      "mae": 7.517,
+      "rmse": 9.614,
+      "bias": 0.767,
+      "spearman_r": 0.743,
+      "top10pct_capture": 0.465,
+      "n": 3958
+    },
+    "structural_plus_ridge": {
+      "mae": 7.517,
+      "rmse": 9.614,
+      "bias": 0.767,
+      "spearman_r": 0.745,
+      "top10pct_capture": 0.457,
+      "n": 3958
+    }
+  },
+  "ridge_dates": {
+    "n_dates": 23,
+    "season_avg_baseline": {
+      "mae": 7.623,
+      "rmse": 9.839,
+      "bias": -0.478,
+      "spearman_r": 0.724,
+      "top10pct_capture": 0.482,
+      "n": 3626
+    },
+    "structural": {
+      "mae": 7.551,
+      "rmse": 9.639,
+      "bias": 0.79,
+      "spearman_r": 0.741,
+      "top10pct_capture": 0.459,
+      "n": 3626
+    },
+    "structural_plus_ridge": {
+      "mae": 7.552,
+      "rmse": 9.639,
+      "bias": 0.79,
+      "spearman_r": 0.744,
+      "top10pct_capture": 0.45,
+      "n": 3626
+    }
+  },
+  "sd_curve": [
+    6.264001038811818,
+    0.1459282145576832
+  ],
+  "data": "ESPN box scores, 2026-27 regular season through 2026-11-21; evaluated on every player who played"
+}

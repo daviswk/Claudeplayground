@@ -3,7 +3,8 @@ OUT = sys.argv[1]; os.makedirs(OUT, exist_ok=True)
 B = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
 def get(u):
     with urllib.request.urlopen(u, timeout=30) as r: return json.load(r)
-start, end = dt.date(2026,10,15), dt.date(2026,11,13)
+start = dt.date(2026,10,15)
+end = dt.date.fromisoformat(sys.argv[2]) if len(sys.argv) > 2 else dt.date.today()  # usage: fetch_espn.py OUT_DIR [YYYY-MM-DD]
 days = [(start+dt.timedelta(d)).strftime("%Y%m%d") for d in range((end-start).days+1)]
 events = {}
 with cf.ThreadPoolExecutor(8) as ex:

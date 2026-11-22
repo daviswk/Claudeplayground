@@ -20,3 +20,7 @@ Projection = projected minutes × season-long per-play rates (USG%, points per p
 - Minutes come from the player's average in tonight's role (starter or bench), with a blowout trim for starters when the spread is above 4.
 - Lineups: SAC confirmed (NBC Sports); POR = last game's starters; OKC/LAC projected. Players absent from the team's last 4 games are treated as out.
 - Backtest (last 7 days, actual starters): roughly ties season averages (see `results/adv_eval.json`).
+
+## FanDuel GPP builder
+`../nba-fanduel-gpp/` turns these ESPN logs into FanDuel NBA Classic tournament lineups (projections, correlated simulation,
+MILP portfolio). `fetch_espn.py` now takes an end date: `python fetch_espn.py OUT_DIR [YYYY-MM-DD]`.
